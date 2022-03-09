@@ -15,6 +15,7 @@ import com.liyaan.myffmepgfirst.asp.net.LogNet
 import com.liyaan.myffmepgfirst.asp.permission.Permission
 import com.liyaan.myffmepgfirst.asp.permission.PermissionDenied
 import com.liyaan.myffmepgfirst.asp.permission.PermissionFailed
+import com.liyaan.myffmepgfirst.http.HttpRequest
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
@@ -43,15 +44,13 @@ class MainActivity : AppCompatActivity() {
         }catch (e: Exception){
             Log.i("LIYAAN", "文件读取失败")
         }
-//        HttpRequest.requestUrl("http://gateway.ops.aitifen.cn/dev/gateway/gsvip-app/index/" +
-//                "account/balance/getInfo?student_code=VP79958").get {
+//        HttpRequest.requestUrl("").get {
 //            Log.i("LIYAAN",it)
 //            sampleTextView.text = it
 //        }
-//        val json = "{\"student_code\":\"VP79958\",\"page\":\"1\",\"page_size\":\"1\"}"
+//        val json = "{\"page\":\"1\",\"page_size\":\"1\"}"
 //        HttpRequest
-//            .requestUrl("http://gateway.ops.aitifen.cn/dev/gateway/gsvip-app/" +
-//                    "index/goods/getOrderList").requestJson(json).postJson {
+//            .requestUrl("").requestJson(json).postJson {
 //                Log.i("LIYAAN","psotJson   $it")
 //                sampleTextView.text = it
 //            }
