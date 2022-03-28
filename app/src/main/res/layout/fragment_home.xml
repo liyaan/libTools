@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.HomeFragment"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_flow_and_download"
+            android:layout_width="match_parent"
+            android:layout_height="60dip"
+            android:text="Flow And Download" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_flow_and_room"
+            android:layout_width="match_parent"
+            android:layout_height="60dip"
+            android:text="Flow And Room" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_flow_and_retrofit"
+            android:layout_width="match_parent"
+            android:layout_height="60dip"
+            android:text="Flow And Retrofit" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_flow_and_flow"
+            android:layout_width="match_parent"
+            android:layout_height="60dip"
+            android:text="STATEFLOW" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_flow_shared_flow"
+            android:layout_width="match_parent"
+            android:layout_height="60dip"
+            android:text="SHAREFLOW" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

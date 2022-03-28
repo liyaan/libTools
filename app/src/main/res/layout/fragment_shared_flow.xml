@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.SharedFlowFragment">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:name="com.liyaan.myffmepgfirst.fragment.TextFragment"
+                android:id="@+id/one"></fragment>
+
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:name="com.liyaan.myffmepgfirst.fragment.TextFragment"
+                android:id="@+id/two"></fragment>
+
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:name="com.liyaan.myffmepgfirst.fragment.TextFragment"
+                android:id="@+id/three"></fragment>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_not_started_24"
+            android:layout_gravity="bottom|start"
+            android:layout_marginLeft="8dip"
+            android:layout_marginBottom="8dip"
+            android:id="@+id/btn_start" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_pause_24"
+            android:layout_gravity="bottom|end"
+            android:layout_marginRight="8dip"
+            android:layout_marginBottom="8dip"
+            android:id="@+id/btn_pause" />
+    </FrameLayout>
+</layout>

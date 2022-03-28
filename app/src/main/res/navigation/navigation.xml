@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.liyaan.myffmepgfirst.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_downloadFragment2"
+            app:destination="@id/downloadFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_userFragment2"
+            app:destination="@id/userFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_retrofitFragment2"
+            app:destination="@id/retrofitFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_numberFragment"
+            app:destination="@id/numberFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sharedFlowFragment"
+            app:destination="@id/sharedFlowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/downloadFragment2"
+        android:name="com.liyaan.myffmepgfirst.fragment.DownloadFragment"
+        android:label="DownloadFragment" />
+    <fragment
+        android:id="@+id/userFragment2"
+        android:name="com.liyaan.myffmepgfirst.fragment.UserFragment"
+        android:label="UserFragment" />
+    <fragment
+        android:id="@+id/retrofitFragment2"
+        android:name="com.liyaan.myffmepgfirst.fragment.RetrofitFragment"
+        android:label="RetrofitFragment" />
+    <fragment
+        android:id="@+id/numberFragment"
+        android:name="com.liyaan.myffmepgfirst.fragment.NumberFragment"
+        android:label="NumberFragment" />
+    <fragment
+        android:id="@+id/sharedFlowFragment"
+        android:name="com.liyaan.myffmepgfirst.fragment.SharedFlowFragment"
+        android:label="SharedFlowFragment" />
+</navigation>
