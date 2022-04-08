@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="subject"
+            type="com.liyaan.myffmepgfirst.carhome.model.SubjectDataDataX" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:id="@+id/number"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:textSize="@dimen/text_size_12sp"
+                android:text="@{@string/sharp_label+ String.valueOf(subject.id)}"
+                tools:text="#01"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/recycle_item_image"
+                android:layout_height="@dimen/recycle_item_image"
+                android:id="@+id/avator"
+                app:bindingImage="@{subject.envelopePic}"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@{subject.title}"
+                android:textSize="@dimen/text_size_16sp"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+</layout>
