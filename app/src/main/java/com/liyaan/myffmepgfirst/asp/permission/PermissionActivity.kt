@@ -73,6 +73,10 @@ class PermissionActivity:AppCompatActivity() {
         requestCallBack?.permissionCanceled()
         this.finish();
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+    }
     override fun finish() {
         super.finish()
         overridePendingTransition(0, 0)

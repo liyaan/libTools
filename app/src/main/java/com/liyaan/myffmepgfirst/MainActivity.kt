@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     private val sampleTextView by lazy {
         findViewById<TextView>(R.id.sample_text)
     }
-
+    private val mHandler = Handler()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -106,5 +106,8 @@ class MainActivity : AppCompatActivity() {
         return super.dispatchTouchEvent(ev)
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+    }
 
 }

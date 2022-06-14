@@ -1,5 +1,7 @@
 package com.xuexuan.traceplugin;
 
+import com.android.ddmlib.Log;
+
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.Label;
@@ -83,13 +85,15 @@ public class TraceVisitor extends ClassVisitor {
                     if ("onCreate".equals(name)) {
                         mv.visitVarInsn(ALOAD, 0);
                         mv.visitMethodInsn(INVOKESTATIC,
-                                "com/xuexuan/androidaop/traceutils/TraceUtil",
+                                "com/liyaan/myffmepgfirst/utils/TraceUtil",
                                 "onActivityCreate", "(Landroid/app/Activity;)V",
                                 false);
+                        Log.i("aaaaaa","onCreate()");
                     } else if ("onDestroy".equals(name)) {
                         mv.visitVarInsn(ALOAD, 0);
-                        mv.visitMethodInsn(INVOKESTATIC, "com/xuexuan/androidaop/traceutils/TraceUtil"
+                        mv.visitMethodInsn(INVOKESTATIC, "com/liyaan/myffmepgfirst/utils/TraceUtil"
                                 , "onActivityDestroy", "(Landroid/app/Activity;)V", false);
+                        Log.i("aaaaaa","onDestroy()");
                     }
                 }
             }
