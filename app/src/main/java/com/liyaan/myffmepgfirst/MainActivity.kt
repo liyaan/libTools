@@ -16,6 +16,7 @@ import com.liyaan.myffmepgfirst.asp.permission.Permission
 import com.liyaan.myffmepgfirst.asp.permission.PermissionDenied
 import com.liyaan.myffmepgfirst.asp.permission.PermissionFailed
 import com.liyaan.myffmepgfirst.http.HttpRequest
+import com.liyaan.myffmepgfirst.view.GraphicsVerifyView
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
@@ -43,6 +44,19 @@ class MainActivity : AppCompatActivity() {
             openFile(file.absolutePath)
         }catch (e: Exception){
             Log.i("LIYAAN", "文件读取失败")
+        }
+
+        findViewById<GraphicsVerifyView>(R.id.verView).apply {
+            verifyCallBack = object : GraphicsVerifyView.VerifyCallBack{
+                override fun onSuccess() {
+                    Toast.makeText(this@MainActivity,"成功",Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onFail() {
+                    Toast.makeText(this@MainActivity,"失败",Toast.LENGTH_SHORT).show()
+//                    reset()
+                }
+            }
         }
 //        HttpRequest.requestUrl("").get {
 //            Log.i("LIYAAN",it)
