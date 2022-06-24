@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.10.2)
+#添加头文件的路劲（相对于本文件的路径）
 include_directories(src/main/cpp/include)
+#设置FFmpeg的库所在路径的变量
 set(FF ${CMAKE_CURRENT_SOURCE_DIR}/libs/${ANDROID_ABI})
 
 add_library(avcodec SHARED IMPORTED)

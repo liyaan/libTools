@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         try {
             val file = File(filePath, "123456.mp4");
             Log.i("LIYAAN", "${file.length()} ${file.exists()}")
-            openFile(file.absolutePath)
+            openFile(file.absolutePath,String())
         }catch (e: Exception){
             Log.i("LIYAAN", "文件读取失败")
         }
@@ -78,7 +78,7 @@ class MainActivity : AppCompatActivity() {
      * which is packaged with this application.
      */
     private external fun stringFromJNI(): String
-    private external fun openFile(url: String)
+    private external fun openFile(url: String, handle:Any)
     companion object {
         // Used to load the 'native-lib' library on application startup.
         init {
